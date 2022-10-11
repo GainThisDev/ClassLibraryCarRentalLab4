@@ -5,6 +5,9 @@
 
 namespace ClassLibraryCarRental
 {
+    /// <summary>
+    /// Клиент
+    /// </summary>
     public class Client : IValidatable
     {
         /// <summary>
@@ -63,6 +66,10 @@ namespace ClassLibraryCarRental
             Adress = adress;
             PhoneNumber = phoneNumber;
         }
+        /// <summary>
+        /// Переопределение метода ToString() для класса клиента
+        /// </summary>
+        /// <returns>Строка описание класса клиента</returns>
         public override string ToString()
         {
             return $"Имя: {FirstName}, Фамилия: {LastName}, Отчество: {LastName}, Адрес: {Adress}, Номер телефона: {PhoneNumber}\n";

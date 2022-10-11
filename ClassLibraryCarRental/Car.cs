@@ -6,7 +6,7 @@
 namespace ClassLibraryCarRental
 {
     /// <summary>
-    /// Класс машины
+    /// Машина
     /// </summary>
     public class Car : IValidatable
     {
@@ -61,7 +61,7 @@ namespace ClassLibraryCarRental
         /// Переопределение метода ToString() для 
         /// поледующего корректного вывода в ListView
         /// </summary>
-        /// <returns>Описание экземпляра класса</returns>
+        /// <returns>Строка описание класса машины</returns>
         public override string ToString()
         {
             return $"Модель: {Model}, Цена: {Price}, " +
