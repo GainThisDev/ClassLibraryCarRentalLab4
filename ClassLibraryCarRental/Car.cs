@@ -65,7 +65,7 @@ namespace ClassLibraryCarRental
         public override string ToString()
         {
             return $"Модель: {Model}, Цена: {Price}, " +
-                   $"Аренда за сутки: {HireRate}, Тип машины: {CarType}";
+                   $"Аренда за сутки: {HireRate}, Тип машины: {CarType}\n";
         }
     }
 }
