@@ -13,19 +13,19 @@ namespace ClassLibraryCarRental
         /// <summary>
         /// Модель автомобиля
         /// </summary>
-        public string Model = string.Empty;
+        public string Model { get; set; } = string.Empty;
         /// <summary>
         /// Цена авто
         /// </summary>
-        public int Price = 1;
+        public int Price { get; set; } = 1;
         /// <summary>
         /// Цена аренды (в день)
         /// </summary>
-        public int HireRate = 1;
+        public int HireRate { get; set; } = 1;
         /// <summary>
         /// Тип машины
         /// </summary>
-        public CarTypes CarType = CarTypes.Легковой;
+        public CarTypes CarType { get; set; } = CarTypes.Легковой;
 
         public bool IsValid
         {
