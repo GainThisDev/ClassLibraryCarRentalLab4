@@ -26,7 +26,9 @@ namespace ClassLibraryCarRental
         /// Тип машины
         /// </summary>
         public CarTypes CarType { get; set; } = CarTypes.Легковой;
-
+        /// <summary>
+        /// Реализация интерфейса валидации для класса машины
+        /// </summary>
         public bool IsValid
         {
             get 
