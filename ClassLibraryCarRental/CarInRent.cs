@@ -26,6 +26,9 @@ namespace ClassLibraryCarRental
         /// Дата окончания проживания
         /// </summary>
         public DateTime EndDate { get; set; }
+        /// <summary>
+        /// Реализация интерфейса валидации для класса аренды машины
+        /// </summary>
         public bool IsValid
         {
             get
