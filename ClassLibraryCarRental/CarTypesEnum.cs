@@ -1,6 +1,6 @@
 ﻿namespace ClassLibraryCarRental
 {
-    enum CarTypes
+    public enum CarTypes
     {
         /// <summary>
         /// Легковой автомобиль

@@ -8,20 +8,34 @@ namespace ClassLibraryCarRental
     /// <summary>
     /// Класс машины
     /// </summary>
-    public class Car
+    public class Car : IValidatable
     {
         /// <summary>
         /// Модель автомобиля
         /// </summary>
-        string Model = string.Empty;
+        public string Model = string.Empty;
         /// <summary>
         /// Цена авто
         /// </summary>
-        int Price = 100;
+        public int Price = 1;
         /// <summary>
         /// Цена аренды
         /// </summary>
-        int HireRate = 10;
+        public int HireRate = 1;
+        /// <summary>
+        /// Тип машины
+        /// </summary>
+        public CarTypes CarTypes = CarTypes.Легковой;
 
+        public bool IsValid
+        {
+            get 
+            { 
+                if (string.IsNullOrEmpty(Model)) return false;
+                if (Price <= 1) return false;
+                if (HireRate <= 1) return false;
+                return true;
+            }
+        }
     }
 }
