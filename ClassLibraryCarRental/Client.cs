@@ -11,12 +11,10 @@ namespace ClassLibraryCarRental
         /// Имя
         /// </summary>
         public string FirstName { get; set; } = string.Empty;
-
         /// <summary>
         /// Отчество
         /// </summary>
         public string MiddleName { get; set; } = string.Empty;
-
         /// <summary>
         /// Фамилия
         /// </summary>
