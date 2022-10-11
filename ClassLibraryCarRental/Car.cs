@@ -19,13 +19,13 @@ namespace ClassLibraryCarRental
         /// </summary>
         public int Price = 1;
         /// <summary>
-        /// Цена аренды
+        /// Цена аренды (в день)
         /// </summary>
         public int HireRate = 1;
         /// <summary>
         /// Тип машины
         /// </summary>
-        public CarTypes CarTypes = CarTypes.Легковой;
+        public CarTypes CarType = CarTypes.Легковой;
 
         public bool IsValid
         {
@@ -36,6 +36,34 @@ namespace ClassLibraryCarRental
                 if (HireRate <= 1) return false;
                 return true;
             }
+        }
+        /// <summary>
+        /// Конструктор без параметров
+        /// </summary>
+        public Car() { }
+        /// <summary>
+        /// Конструктор класса на основе данных пользователя
+        /// </summary>
+        /// <param name="model">Модель машины</param>
+        /// <param name="price">Цена машины</param>
+        /// <param name="hireRate">Цена аренды (в день)</param>
+        /// <param name="carType">Тип машины (легковая, грузовая)</param>
+        public Car(string model, int price, int hireRate, CarTypes carType)
+        {
+            Model = model;
+            Price = price;
+            HireRate = hireRate;
+            CarType = carType;
+        }
+        /// <summary>
+        /// Переопределение метода ToString() для 
+        /// поледующего корректного вывода в ListView
+        /// </summary>
+        /// <returns>Описание экземпляра класса</returns>
+        public override string ToString()
+        {
+            return $"Модель: {Model}, Цена: {Price}, " +
+                   $"Аренда за сутки: {HireRate}, Тип машины: {CarType}";
         }
     }
 }
